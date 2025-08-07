@@ -1,0 +1,70 @@
+displays:
+  1:
+    name: "Display 1 - Main"
+    ip: "192.168.1.101"
+    port: 1515
+    protocol: "tcp"
+    model: "Samsung QM75R"
+    location: "Main Hall"
+    mac_address: "AA:BB:CC:DD:EE:01"
+  2:
+    name: "Display 2 - Left"
+    ip: "192.168.1.102"
+    port: 1515
+    protocol: "tcp"
+    model: "Samsung QM75R"
+    location: "Left Wing"
+    mac_address: "AA:BB:CC:DD:EE:02"
+  3:
+    name: "Display 3 - Right"
+    ip: "192.168.1.103"
+    port: 1515
+    protocol: "tcp"
+    model: "Samsung QM75R"
+    location: "Right Wing"
+    mac_address: "AA:BB:CC:DD:EE:03"
+  4:
+    name: "Display 4 - Bottom"
+    ip: "192.168.1.104"
+    port: 1515
+    protocol: "tcp"
+    model: "Samsung QM75R"
+    location: "Information Desk"
+    mac_address: "AA:BB:CC:DD:EE:04"
+
+magicinfo:
+  server_url: "http://192.168.1.200:7001"
+  username: "admin"
+  password: "admin123"
+  api_key: "your-magicinfo-api-key"
+  enabled: true
+  
+optisigns:
+  server_url: "http://192.168.1.201:8080"
+  api_key: "your-optisigns-api-key"
+  username: "admin"
+  password: "admin123"
+  enabled: true
+
+content:
+  static_path: "./static_content/"
+  upload_path: "./uploads/"
+  max_file_size: 100  # MB
+  allowed_extensions: [".jpg", ".jpeg", ".png", ".gif", ".mp4", ".avi", ".mov", ".webm"]
+  streaming_sources:
+    rtmp_server: "rtmp://192.168.1.205/live/"
+    youtube_api_key: "your-youtube-api-key"
+    
+server:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  ssl_enabled: false
+  ssl_cert: ""
+  ssl_key: ""
+
+logging:
+  level: "INFO"
+  file: "video_wall.log"
+  max_size: 10  # MB
+  backup_count: 5
